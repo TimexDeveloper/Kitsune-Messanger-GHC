@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
-import { Card, CardBody, CardHeader } from '@/components/ui/Card';
 import { Phone, Video, Settings, LogOut, Menu, X } from 'lucide-react';
 
 interface Message {
@@ -39,7 +38,7 @@ export default function ChatPage() {
     },
   ]);
 
-  const [conversations, setConversations] = useState<Conversation[]>([
+  const [conversations] = useState<Conversation[]>([
     {
       id: '1',
       name: 'John Doe',

@@ -201,7 +201,7 @@ export async function getConversationMessages(conversationId: string, limit = 50
 // Guest session queries
 export async function createGuestSession(guestName: string, userId: string, token: string) {
   try {
-    const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days
+    const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(); // 30 days
     const result = await sql`
       INSERT INTO guest_sessions (token, guest_name, user_id, expires_at)
       VALUES (${token}, ${guestName}, ${userId}, ${expiresAt})
