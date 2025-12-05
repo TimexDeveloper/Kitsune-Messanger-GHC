@@ -40,7 +40,6 @@ export async function POST(request: NextRequest) {
 
     // For now, we'll store in a temporary location
     // In production, use Vercel Blob or another storage provider
-    const buffer = await file.arrayBuffer();
     const timestamp = Date.now();
     const fileName = `img-${timestamp}-${file.name}`;
 
