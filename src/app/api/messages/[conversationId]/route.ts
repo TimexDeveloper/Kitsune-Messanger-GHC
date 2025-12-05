@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getOrCreateConversation, getConversationMessages, createMessage } from '@/lib/db/queries';
+import { getConversationMessages, createMessage } from '@/lib/db/queries';
 
 // Get conversation messages
 export async function GET(
