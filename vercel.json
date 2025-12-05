@@ -1,0 +1,20 @@
+{
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 512,
+      "maxDuration": 60
+    }
+  },
+  "env": {
+    "NEXTAUTH_SECRET": "@NEXTAUTH_SECRET",
+    "NEXTAUTH_URL": "@NEXTAUTH_URL",
+    "DATABASE_URL": "@DATABASE_URL",
+    "POSTGRES_PRISMA_URL": "@POSTGRES_PRISMA_URL",
+    "POSTGRES_URL_NON_POOLING": "@POSTGRES_URL_NON_POOLING",
+    "KV_URL": "@KV_URL",
+    "KV_REST_API_URL": "@KV_REST_API_URL",
+    "KV_REST_API_TOKEN": "@KV_REST_API_TOKEN"
+  }
+}
