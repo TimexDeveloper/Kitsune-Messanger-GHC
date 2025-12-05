@@ -49,7 +49,6 @@ export async function POST(
       );
     }
 
-    const token = authHeader.substring(7);
     const userId = request.headers.get('x-user-id') || '';
 
     if (!userId) {
